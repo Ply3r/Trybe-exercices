@@ -1,0 +1,12 @@
+Oque eu sei no inicio do curso:
+HTML
+CSS
+SASS/SCSS
+JavaScript
+Python
+jQuery
+React(um pouco)
+Oque eu vou aprender na Trybe:
+-Unix
+-Bash
+-Git
