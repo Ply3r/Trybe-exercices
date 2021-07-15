@@ -11,3 +11,6 @@ Oque eu vou aprender na Trybe:
 -Bash
 -Git
 -Python
+-node
+-softSkills
+
