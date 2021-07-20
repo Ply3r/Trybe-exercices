@@ -1,9 +1,9 @@
 function maiorNome(arr){
     let result = ''
-    for(let c = 0; c < arr.length; c++){
-        for(let i = 0; i < arr.length; i++){
-            if(arr[i].length > arr[c].length){
-                result = arr[i]
+    for(let key in arr){
+        for(let key2 in arr){
+            if(arr[key2].length > arr[key].length){
+                result = arr[key2]
             }
         }
     }

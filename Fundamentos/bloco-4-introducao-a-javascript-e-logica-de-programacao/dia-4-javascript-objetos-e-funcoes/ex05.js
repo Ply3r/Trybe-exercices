@@ -12,9 +12,9 @@ let info2 = {
     recorrente: 'Sim',
 };
 
-for(let c = 0; c < Object.values(info).length; c++){
-    if(c != Object.values(info).length - 1){
-        console.log(`${Object.values(info)[c]} e ${Object.values(info2)[c]}`)
+for(keys in info){
+    if(keys != 'recorrente'){
+        console.log(`${info[keys]} e ${info2[keys]}`)
     }else{
         console.log('Ambos recorrentes')
     }

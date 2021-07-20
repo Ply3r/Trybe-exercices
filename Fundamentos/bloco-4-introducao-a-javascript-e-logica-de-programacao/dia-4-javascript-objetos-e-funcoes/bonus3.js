@@ -23,8 +23,8 @@ function frutas(arr){
     let obj = {}
     arr.forEach(e => {
         let vezesRepetidas = 0
-        for(let c = 0; c < arr.length; c++){ 
-            if(e == arr[c]){
+        for(let key in arr){ 
+            if(e == arr[key]){
                 vezesRepetidas++
             }
         }
