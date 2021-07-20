@@ -1,3 +1,3 @@
 # Trybe-exercices
 
-Meu repositorio para projetos feitos na trybe :)
+My repository for exercises and projects made at Trybe :)
