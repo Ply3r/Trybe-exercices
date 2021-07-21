@@ -16,13 +16,27 @@ body{
 }
 
 main{
+    position: relative;
     color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 10;
+
     h1{
         text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
         margin-bottom: 15px;
     }
+    h2{
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
     
+}
+.dia{
+    position: absolute;
+    top: 29%;
+    z-index: -1;
+    width: 400px;
+    height: 400px;
+    background-color: white;
 }
