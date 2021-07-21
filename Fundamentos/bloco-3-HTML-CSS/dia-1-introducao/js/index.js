@@ -1,5 +1,4 @@
-horaDodia()
-function horaDodia(){
+setInterval(function horaDodia(){
     let horas = new Date().getHours()
     let time = new Date().getMinutes()
     let div = document.getElementById('horas')
@@ -14,4 +13,4 @@ function horaDodia(){
     }else{
         body.style.background = `#264653`
     }
-}
+}, 1000)
