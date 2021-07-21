@@ -1,0 +1,15 @@
+{
+  "name": "dia-1-introducao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch --style compressed css/style.scss:css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.2"
+  }
+}
