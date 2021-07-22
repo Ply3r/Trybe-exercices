@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+
+      body{
+          display: flex;
+          flex-direction: column;
+      }
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: green;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+        
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+
+      .centralize{
+        align-self: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script>
+      let body = document.querySelector('body')
+      let titulo = document.createElement('h1')
+      let main = document.createElement('main')
+      let section = document.createElement('section')
+      let leftSection = document.createElement('section')
+      let rightSection = document.createElement('section')
+      let imagem = document.createElement('img')
+      let p = document.createElement('p')
+      let ul = document.createElement('ul')
+      
+      let numbers = ['um', 'dois', 'tres', 'quatro', 'cinco', "seis", 'sete', 'oito', 'nove', 'dez']
+      for(let c = 0; c < 8; c++){
+          let li = document.createElement('li')
+          li.innerText = numbers[c]
+          ul.appendChild(li)
+      }
+      for(let c = 0; c < 3; c++){
+          let h3 = document.createElement('h3')
+          h3.innerText = numbers[c]
+          h3.className = "description"
+          main.appendChild(h3)
+      }
+
+
+      titulo.className = 'title'
+      titulo.innerText = `Exercício 5.2 - JavaScript DOM`
+      main.className = 'main-content'
+      section.className = 'center-content'
+      leftSection.className = 'left-content'
+      rightSection.className = 'right-content'
+      
+      imagem.src = "https://picsum.photos/200"
+      imagem.className = 'small-image'
+      p.innerText = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident excepturi exercitationem delectus. Tenetur tempora neque quia necessitatibus. Dolor illum nam doloremque possimus quidem esse voluptas iusto inventore? Facere, voluptatum distinctio.'
+
+        
+
+      body.appendChild(titulo)
+      body.appendChild(main)
+      main.appendChild(section)
+      main.appendChild(leftSection)
+      main.appendChild(rightSection)
+      section.appendChild(p)
+      leftSection.appendChild(imagem)
+      rightSection.appendChild(ul)
+      main.removeChild(leftSection)
+    </script>
+  </body>
+</html>
