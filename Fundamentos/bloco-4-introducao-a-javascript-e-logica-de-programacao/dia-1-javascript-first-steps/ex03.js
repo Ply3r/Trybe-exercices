@@ -1,11 +1,6 @@
 function maiorTreis(a, b, c){
-    if(a > b && a > c){
-        return `Maior: ${a}`
-    }else if(b > a && b > c){
-        return `Maior: ${b}`
-    }else{
-        return `Maior: ${c}`
-    }
+    let result = [a,b,c].sort((a,b) => b - a)
+    return result[0]
 }
 
 console.log(maiorTreis(3, 6, 9))
