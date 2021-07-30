@@ -49,7 +49,7 @@ $('document').ready( _ => {
     }
   }
 
-  //Adicionando validações do form
+  //adicionando informações
   let information = {
     name: '',
     email: '',
@@ -76,7 +76,7 @@ $('document').ready( _ => {
     let cargo = document.getElementById('cargo').value
     let descricao = document.getElementById('descricao').value
     let date = document.getElementById('data').value
-
+    
     information.name = name
     information.email = email
     information.cpf = cpf
@@ -90,43 +90,53 @@ $('document').ready( _ => {
     information.date = date
   }
   
+  //Adicionando validações do form e botão enviar
   let button = document.getElementById('bot')
-  let clear = document.getElementById('clear')
-  let cont = 0
   button.addEventListener('click', _=> {
-    let fazerDiv = true
+    let cont = 0
+    
     addInformation()
     for( let key in information){
       if (information[key] == '') {
         alert(`Valor esperado no campo ${key}`)
-        fazerDiv = false
+        
       }
     }
-
+    
     //adicionando validação da hora
     let verificandoFormatoData = information.date.match(/(^\d{2})[\W](\d{2})[\W](\d{4})/gm)
-    if(verificandoFormatoData) {
-      console.log('valor de data correto')
-    }else{
-      alert('Valor de Data incorreto')
+    let numeros = verificandoFormatoData[0].match(/\d+/gm)
+    let horaPositiva = true
+    for(let valor in numeros){
+      Number(numeros[valor]) < 0 ? horaPositiva = false : ''
+      Number(numeros[0]) > 31 ? horaPositiva = false : ''
+      Number(numeros[1]) > 12 ? horaPositiva = false : ''
     }
-
+    
+    verificandoFormatoData && horaPositiva ? '' : alert('Valor de Data incorreto')
+    
     //fazendo a div com as informações
-    if(fazerDiv && verificandoFormatoData){
+    $('div').remove()
+    if(verificandoFormatoData){
       cont++
       let div = document.createElement('div')
       for(let key in information){
-        div.innerHTML += `${key}: ${information[key]}<br>`
+        information[key] != '' ? div.innerHTML += `${key}: ${information[key]}<br>` : div.innerHTML += `${key}: Valor não informado <br>`
       }
       cont == 1 ? $('main').append(div) : ''
     }
   })
-
-  clear.addEventListener('click', _=> {
-    for(let key in information){
-      information[key] = ''
-    }
-    $('div').remove()
-  })
-
+  
+  //adicionando botão clear
+  botClear()
+  function botClear() {
+    let clear = document.getElementById('clear')
+    clear.addEventListener('click', _=> {
+      for(let key in information){
+        information[key] = ''
+      }
+      $('div').remove()
+    })
+  }
+  
 })
