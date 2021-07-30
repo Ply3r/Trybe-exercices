@@ -1,7 +1,7 @@
-function tringulo(n){
-    for(let c = 0; c <= n; c++){
-        console.log('*'.repeat(c))
-    }
+function gerarTringulo(n) {
+  for(let c = 1; c <= n; c++){
+    console.log('*'.repeat(c))
+  }
 }
 
-tringulo(5)
+gerarTringulo(6)
