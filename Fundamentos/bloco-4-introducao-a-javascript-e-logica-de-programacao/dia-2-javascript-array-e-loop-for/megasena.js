@@ -18,6 +18,6 @@ function gerarApostas(n) {
   })
   console.log(megaSena)
   console.log(`Acertos Totais: ${acertosTotais}`)
-  array.forEach((e,i) => arrayAcertos[i] == 6 ? console.log(`Acertos Play ${i}: ${arrayAcertos[i]}`) : '')
+  array.forEach((e,i) => arrayAcertos[i] == 6 ? console.log(`Acertos Play numero ${i}: ${arrayAcertos[i]}`) : '')
 }
 gerarApostas(1000000)
