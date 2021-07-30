@@ -1,9 +1,9 @@
-function primo(n){
-    let primo = true
-    for(let c = 2; c < n; c++){
-        n %c == 0 ? primo = false : ''
-    }
-    console.log(`É primo? : ${primo}`)
+function verificadorDeNumeroPrimo(n) {
+  let verificador = true
+  for(let c = 2; c < n; c++){
+    n %c == 0 ? verificador = false : ''
+  }
+  return `É primo?: ${verificador}`
 }
 
-primo(10)
+console.log(verificadorDeNumeroPrimo(7))
