@@ -9,5 +9,4 @@ function tringuloVazio(n) {
     }   
   }
 }
-
 tringuloVazio(21)
