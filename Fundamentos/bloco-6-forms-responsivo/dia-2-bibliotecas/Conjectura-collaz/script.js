@@ -10,9 +10,9 @@ function conjecturaDeCollatz(n) {
 }
 
 //função que cria um array de 0 ate o Numero informado
-function getNumeros(n) {
+function getNumeros(valorFinal, valorInicial = 1) {
   let array = []
-  for(let c = 1; c <= n; c++){
+  for(let c = valorInicial; c <= valorFinal; c++){
     let numeros = {}
     numeros.name = c
     numeros.data = conjecturaDeCollatz(c)
@@ -26,7 +26,7 @@ function getNumero(n) {
   let array = []
   let numeros = {}
   numeros.name = n
-  numeros.data = conjecturaDeCollatz(n)
+  numeros.data = conjecturaDeCollatz(n).map(e => Number(e))
   array.push(numeros)
   console.log(array)
   return array
@@ -52,20 +52,20 @@ $('#bot-especifico').on('click', _ => {
   let valor = document.getElementById('especifico').value
   valor < 1 || valor == undefined ? (alert('valor invalido'), valor = 1) : ''
   Highcharts.chart('container', {
+    title: {
+      text: 'Collaz Conjecture'
+    },
+    xAxis: {
       title: {
-          text: 'Collaz Conjecture'
-      },
-      xAxis: {
-          title: {
-            text: 'repetition'
-          }
-      },
-      yAxis: {
-          title: {
-              text: 'Numbers'
-          }
-      },
-      series: getNumero(valor)
+        text: 'repetition'
+      }
+    },
+    yAxis: {
+      title: {
+        text: 'Numbers'
+      }
+    },
+    series: getNumero(valor)
   });
 })
 
@@ -73,6 +73,7 @@ $('#bot-especifico').on('click', _ => {
 $('#bot-varios').on('click', _ => {
   $('#container').html('')
   let valor = document.getElementById('varios').value
+  let valores = valor.match(/\d+/gm).map(e => Number(e)).reverse()
   valor < 1 || valor == undefined ? (alert('valor invalido'), valor = 1) : ''
   Highcharts.chart('container', {
       title: {
@@ -88,7 +89,7 @@ $('#bot-varios').on('click', _ => {
               text: 'Numbers'
           }
       },
-      series: getNumeros(valor)
+      series: getNumeros(valores[0], valores[1])
   });
 })
 
