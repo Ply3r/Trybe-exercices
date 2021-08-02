@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <h1>Formulario</h1>
+    <form action="" method="GET" enctype="text/plain">
+      <fieldset>
+        <label for="nome">Nome Completo:
+          <input type="text" name="nome" required id="nome" maxlength="40">
+        </label>
+
+        <label for="email">Email:
+          <input type="text" name="email" required id="email" maxlength="50">
+        </label>
+
+        <label for="cpf">CPF:
+          <input type="text" name="cpf" required id="cpf" maxlength="11">
+        </label>
+
+        <label for="adress">Endereço:
+          <input type="text" name="adress" required id="adress" maxlength="200">
+        </label>
+
+        <label for="cidade">Cidade:
+          <input type="text" name="cidade" required id="cidade" maxlength="28">
+        </label>
+
+        <label for="estado">Estado:
+          <select name="estado" id="estado" required>
+            <option value="">Escolha uma opção</option>
+          </select>
+        </label>
+        <label for="tipo1">Tipo de Moradia:
+          <input id="tipo1" type="radio" name="tipo" checked required>Casa
+        </label>
+        <label for="tipo2">
+          <input id="tipo2" type="radio" name="tipo" required>Apartamento
+        </label>  
+      </fieldset>
+      <fieldset>
+        <label for="textarea">Resumo Curriculo:
+          <textarea required name="texto" id="textarea" cols="20" rows="10" maxlength="1000"></textarea>
+        </label>
+        <label for="cargo">Cargo:
+          <input id="cargo" type="text" name="cargo" required maxlength="40">
+        </label>
+        <label for="descricao">Descrição:
+          <input id="descricao" required type="text" name="descricao" maxlength="500">
+        </label>
+        <label for="data">Data:
+          <input id="data" type="text" placeholder="XX/XX/XXXX" required>
+        </label>
+      </fieldset>
+      <section>
+        <button type="submit" id="bot">Enviar</button>
+        <button type="reset" id="clear">Clear</button>
+      </section>
+    </form>
+  </main>
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
