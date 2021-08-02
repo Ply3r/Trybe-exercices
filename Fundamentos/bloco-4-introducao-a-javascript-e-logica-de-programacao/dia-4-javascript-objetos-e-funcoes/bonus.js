@@ -12,33 +12,33 @@ const algarismosRomanosParaNumber = str => {
         1000 : /^[M]$/gm,
     }
     array.forEach((e,i) => {
-        for(let c = 0; c < Object.values(valores).length; c++){
-            if(e.match(Object.values(valores)[c])){
+        for(let keys in valores){
+            if(e.match(valores[keys])){
                 if(array[i - 1] == 'I' && array[i] == 'V'){
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
 
                 }else if(array[i - 1] == 'I' && array[i] == 'X'){
 
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
                     
                 }else if(array[i - 1] == 'X' && array[i] == 'L'){
 
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
                     
                 }else if(array[i - 1] == 'X' && array[i] == 'C'){
 
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
                     
                 }else if(array[i - 1] == 'C' && array[i] == 'D'){
 
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
                     
                 }else if(array[i - 1] == 'C' && array[i] == 'M'){
 
-                    number = Number(Object.keys(valores)[c]) - number
+                    number = Number(keys) - number
                     
                 }else{
-                    number += Number(Object.keys(valores)[c])
+                    number += Number(keys)
                 }
             }
         }
