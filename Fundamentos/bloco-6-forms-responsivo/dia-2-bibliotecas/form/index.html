@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
+  <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+  <link href="popup-validation-master/bin/validation.min.css" rel="stylesheet">
+  <script src="popup-validation-master/bin/validation.min.js"></script>
+</head>
+<body>
+  <main>
+    <h1 class="display-1 text-muted">Formulario</h1>
+    <form action="" method="GET" enctype="text/plain" class="js-form" id="form">
+      <fieldset class="row g-3 mb-5">
+        <label  for="nome" class="col-md-6 mb-3 form-label">
+          <h3>Nome</h3>
+          <input class="form-control validade"  type="name" name="nome" data-validate="required" required id="nome" maxlength="40">
+        </label>
+        
+        <label for="email" class="col-md-6">
+          <h3>Email</h3>
+          <input class="form-control validade" type="email" name="email" data-validate="required, email" id="email" maxlength="50">
+        </label>
+        
+        <label for="cpf">
+          <h3>CPF</h3>
+          <input class="form-control validade" type="text" name="cpf" data-validate="required, text" id="cpf" maxlength="11">
+        </label>
+        
+        <label for="adress">
+          <H3>Endereço</H3>
+          <input class="form-control validade" type="text" name="adress" data-validate="required, text" id="adress" maxlength="200">
+        </label>
+        
+        <label for="cidade">
+          <h3>Cidade</h3>
+          <input class="form-control validade" type="text" name="cidade" data-validate="required, text" id="cidade" maxlength="28">
+        </label>
+        
+        <label for="estado">
+          <h3>Estado</h3>
+          <select name="estado" id="estado" class="form-select" data-validate-field="select">
+            <option value="">Escolha uma opção</option>
+          </select>
+        </label>
+        
+        <h3>Tipo de Moradia</h3>
+        <div class="radios">
+          <div class="form-check col-md-6">
+            <input class="form-check-input"  id="tipo1" type="radio" name="tipo" checked data-validate-field="radio">
+            <label class="form-check-label" for="tipo">Casa</label>
+          </div>
+          
+          <div class="form-check col-md-6">
+            <input class="form-check-input"  id="tipo2" type="radio" name="tipo" checked data-validate-field="radio">
+            <label class="form-check-label" for="tipo">Apartamento</label>
+          </div>
+        </div>
+        
+      </fieldset>
+      <fieldset class="row g-3 mb-5">
+        <label for="textarea">
+          <h3>Resumo Curriculo</h3>
+          <textarea data-validate="required" class="form-control validade" name="texto" id="textarea" cols="20" rows="10" maxlength="1000"></textarea>
+        </label>
+        <label for="cargo">
+          <h3>Cargo</h3>
+          <input class="form-control validade" id="cargo" type="text" name="cargo" data-validate="required" maxlength="40">
+        </label>
+        <label for="descricao">
+          <h3>Descrição</h3>
+          <input class="form-control validade" id="descricao" data-validate="required" type="text" name="descricao" maxlength="500">
+        </label>
+        <label for="data">
+          <h3>Data</h3>
+          <input class="form-control validade" id="data" type="text" placeholder="dd/mm/yyyy" data-validate="required">
+        </label>
+      </fieldset>
+      <section>
+        <button type="submit" id="bot" class="btn btn-primary">Enviar</button>
+        <button type="reset" id="clear" class="btn btn-secondary">Clear</button>
+      </section>
+    </form>
+  </main>
+  
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
