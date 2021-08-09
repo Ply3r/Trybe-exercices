@@ -1,7 +1,7 @@
-function listaTech(arr, name) {
+function listaTech(list, name) {
   let result = []
-  arr.sort()
-  arr.forEach(e => {
+  list.sort()
+  list.forEach(e => {
     let obj = {tech: e, name: name}
     result.push(obj)
   })
