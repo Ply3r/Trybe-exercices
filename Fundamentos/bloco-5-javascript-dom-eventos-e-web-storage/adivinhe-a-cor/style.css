@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -22,10 +23,9 @@ main {
 }
 
 h1 {
-  margin: 5vh 0;
+  margin: 3vh 0;
   font-size: 5rem;
   color: rgb(102, 102, 102);
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 #color-container{
@@ -34,7 +34,7 @@ h1 {
   height: 300px;
   border-radius: 50%;
   border: 5px solid black;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 #bot-container {
