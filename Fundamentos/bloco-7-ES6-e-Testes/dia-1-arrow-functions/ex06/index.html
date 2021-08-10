@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de click</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1{
+      font-size: 5rem;
+      margin-bottom: 5vh;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      font-size: 3rem;
+      color: white;
+      background-color: red;
+      box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    }
+    button:active{
+      box-shadow: none;
+      font-size: 2.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="h1">0</h1>
+  <button id="bot">Click</button>
+  <script src="index.js"></script>
+</body>
+</html>
