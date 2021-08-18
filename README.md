@@ -25,7 +25,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
 - [X] 3-3: _HTML & CSS - Seletores e posicionamento_
 - [X] 3-4: _HTML Semântico_
-- [X] 3-5: Projeto - HTML & CSS
+- [X] 3-5: [Projeto - HTML & CSS](https://ply3r.github.io/)
 
 ##### Bloco 4: Introdução - JavaScript
 
@@ -41,15 +41,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
-- [ ] 5-6: _[Projeto - Arte com Pixels]()_
-- [ ] 5-7: _[Projeto - Lista de tarefas]()_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _[Projeto - Carta Misteriosa]()_
+- [X] 5-6: _[Projeto - Arte com Pixels](https://ply3r.github.io/projetos/pixelArt/index.html)_
+- [X] 5-7: _[Projeto - Lista de tarefas](https://ply3r.github.io/projetos/toDoList/html/index.html)_
+- [X] 5-7: _[Projeto - Adivinhe a Cor](https://ply3r.github.io/projetos/adivinhe-a-cor/index.html)_
+- [X] 5-7: _[Projeto - Carta Misteriosa](https://ply3r.github.io/projetos/carta-misteriosa/index.html)_
 
 ##### Bloco 6: HTML & CSS avançado
 
-- [ ] 6-1: _HTML & CSS - Forms_
+- [X] 6-1: _HTML & CSS - Forms_
 - [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
 - [ ] 6-3: _CSS Flexbox - Part 1_
 - [ ] 6-4: _CSS Flexbox - Part 2_
