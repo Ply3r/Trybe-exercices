@@ -25,3 +25,7 @@ form{
 .radios div{
   width: 50%;
 }
+
+textarea {
+  resize: none;
+}
