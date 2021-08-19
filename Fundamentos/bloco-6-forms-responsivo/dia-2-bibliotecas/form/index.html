@@ -5,93 +5,109 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form</title>
-  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="DatePickerX-master/dist/css/DatePickerX.min.css">
-  <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
-  <link href="popup-validation-master/bin/validation.min.css" rel="stylesheet">
-  <script src="popup-validation-master/bin/validation.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="popup-validation-master/bin/validation.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="container">
+    <h1 class="display-1">Formulario</h1>
+  </header>
   <main>
-    <h1 class="display-1 text-muted">Formulario</h1>
-    <form action="" method="GET" enctype="text/plain" class="js-form" id="form">
-      <fieldset class="row g-3 mb-5">
-        <label  for="nome" class="col-md-6 mb-3 form-label">
-          <h3>Nome</h3>
-          <input class="form-control validade"  type="name" name="nome" data-validate="required" required id="nome" maxlength="40">
-        </label>
-        
-        <label for="email" class="col-md-6">
-          <h3>Email</h3>
-          <input class="form-control validade" type="email" name="email" data-validate="required, email" id="email" maxlength="50">
-        </label>
-        
-        <label for="cpf">
-          <h3>CPF</h3>
-          <input class="form-control validade" type="text" name="cpf" data-validate="required, text" id="cpf" maxlength="11">
-        </label>
-        
-        <label for="adress">
-          <H3>Endereço</H3>
-          <input class="form-control validade" type="text" name="adress" data-validate="required, text" id="adress" maxlength="200">
-        </label>
-        
-        <label for="cidade">
-          <h3>Cidade</h3>
-          <input class="form-control validade" type="text" name="cidade" data-validate="required, text" id="cidade" maxlength="28">
-        </label>
-        
-        <label for="estado">
-          <h3>Estado</h3>
-          <select name="estado" id="estado" class="form-select" data-validate-field="select">
-            <option value="">Escolha uma opção</option>
-          </select>
-        </label>
-        
-        <h3>Tipo de Moradia</h3>
-        <div class="radios">
-          <div class="form-check col-md-6">
-            <input class="form-check-input"  id="tipo1" type="radio" name="tipo" checked data-validate-field="radio">
-            <label class="form-check-label" for="tipo1">Casa</label>
+    <form id="forms" action="" method="GET" enctype="text/plain">
+      <div class="container">
+
+        <div class="row g-3 mb-3">
+          <div class="col">
+            <label class="form-label"  for="nome">Nome Completo:</label>
+            <input class="form-control validate" required data-validate="required" type="text" name="nome" id="nome" maxlength="40">
           </div>
           
-          <div class="form-check col-md-6">
-            <input class="form-check-input"  id="tipo2" type="radio" name="tipo" checked data-validate-field="radio">
-            <label class="form-check-label" for="tipo2">Apartamento</label>
+          <div class="col">
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-control validate" required data-validate="required" type="text" name="email" id="email" maxlength="50">
+          </div>
+          
+        </div>
+        
+        <div class="mb-3">
+          <label class="form-label" for="cpf">CPF:</label>
+          <input class="form-control validate" required data-validate="required" type="text" name="cpf" id="cpf" maxlength="11">
+        </div>
+        
+        
+        <div class="row g-3 mb-3">
+          <div class="col">
+            <label class="form-label" for="adress">Endereço:</label>
+            <input class="form-control validate" required data-validate="required" type="text" name="adress" id="adress" maxlength="200"> 
+          </div>
+          
+          <div class="col">
+            <label class="form-label" for="cidade">Cidade:</label>
+            <input class="form-control validate" required data-validate="required" type="text" name="cidade" id="cidade" maxlength="28">
           </div>
         </div>
         
-      </fieldset>
-      <fieldset class="row g-3 mb-5">
-        <label for="textarea">
-          <h3>Resumo Curriculo</h3>
-          <textarea data-validate="required" class="form-control validade" name="texto" id="textarea" cols="20" rows="10" maxlength="1000"></textarea>
-        </label>
-        <label for="cargo">
-          <h3>Cargo</h3>
-          <input class="form-control validade" id="cargo" type="text" name="cargo" data-validate="required" maxlength="40">
-        </label>
-        <label for="descricao">
-          <h3>Descrição</h3>
-          <input class="form-control validade" id="descricao" data-validate="required" type="text" name="descricao" maxlength="500">
-        </label>
-        <label for="data">
-          <h3>Data</h3>
-          <input class="form-control validade" id="data" type="text" placeholder="dd/mm/yyyy" data-validate="required">
-        </label>
-      </fieldset>
-      <section>
-        <button type="submit" id="bot" class="btn btn-primary">Enviar</button>
-        <button type="reset" id="clear" class="btn btn-secondary">Clear</button>
-      </section>
+        
+        <div class="mb-3">
+          <label class="form-label" for="estado">Estado:</label>
+          <select class="form-select validate" required data-validate="required" name="estado" id="estado">
+            <option value="">Escolha uma opção</option>
+          </select>
+        </div>
+        
+        <p class="lead">Tipo de moradia:</p>
+
+        <div class="mb-4">
+          <div class="form-check">
+            <input class="form-check-input validate" required  data-validate="required" id="tipo1" type="radio" name="tipo" checked>
+            <label class="form-check-label" for="tipo1">Casa</label>
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input validate" required data-validate="required" id="tipo2" type="radio" name="tipo">
+            <label class="form-check-label" for="tipo2">Apartamento</label>
+          </div>
+        </div>
+         
+      </div>
+
+      <div class="container">
+        <div class="mb-3">
+          <label class="form-label lead" for="textarea">Resumo Curriculo:</label>
+          <textarea class="form-control validate" required data-validate="required" name="texto" id="textarea" cols="20" rows="10" maxlength="1000"></textarea>
+        </div>
+        
+        <div class="row g-3 mb-3">
+          <div class="col">
+            <label class="form-label" for="cargo">Cargo:</label>
+            <input class="form-control validate" required data-validate="required" id="cargo" type="text" name="cargo" maxlength="40">
+          </div>
+          
+          <div class="col">
+            <label class="form-label" for="descricao">Descrição:</label>
+            <input class="form-control validate" required data-validate="required" id="descricao" type="text" name="descricao" maxlength="500">
+          </div>
+        </div>
+        
+        <div class="mb-3">  
+          <label class="form-label" for="data">Data:</label>
+          <input class="form-control validate" required data-validate="required" id="data" type="text" placeholder="dd/mm/yyyy"> 
+        </div>
+        
+      </div>
+      <div class="container">
+        <button class="btn btn-primary" type="submit" id="bot">Enviar</button>
+        <button class="btn btn-secondary" type="reset" id="clear">Clear</button>
+      </div>
     </form>
   </main>
   
-  
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="DatePickerX-master/dist/js/DatePickerX.min.js"></script>
+  <script src="popup-validation-master/bin/validation.es6.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
