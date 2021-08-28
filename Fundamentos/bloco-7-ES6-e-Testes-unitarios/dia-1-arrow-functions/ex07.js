@@ -1,7 +1,4 @@
-const replaceX = (str, param) => str.replace(/[xX]/gm, param)
-console.log(replaceX("Tryber x aqui!", "Bebeto"))
-
-var skills = ['JavaScript', 'Python', 'Sass/Scss', 'HTML/CSS', 'jQuery']
+const skills = ['JavaScript', 'Python', 'Sass/Scss', 'HTML/CSS', 'jQuery']
 function concatenate(str, arr) {
   arr = arr.sort()
   let result = `${str} Minhas cinco principais habilidades são: \n`
@@ -10,4 +7,4 @@ function concatenate(str, arr) {
 }
 
 
-console.log(concatenate(replaceX("Tryber x aqui!", "Bebeto"), skills))
+console.log(concatenate('dj Azeitona', skills))
