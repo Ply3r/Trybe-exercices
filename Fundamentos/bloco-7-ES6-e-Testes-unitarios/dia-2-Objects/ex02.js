@@ -50,7 +50,7 @@ function getTotalStudents(obj) {
 
 const getValueByNumber = (obj, index) => Object.values(obj)[index]
 
-const verification = (obj, key, value) => Object.keys(obj).indexOf(key) === Object.values(obj).indexOf(value) ? true : false
+const verification = (obj, key, value) => obj[key] === value ? true : false;
 
 function getMathStudents(obj) {
   let arr = Object.values(obj)
