@@ -34,12 +34,10 @@ const listValues = obj => {
 }
 
 function makeAllLessons() {
-  let allLessons = {lesson1: {}, lesson2: {}, lesson3: {}}
-  let arr = Object.values(allLessons)
-  let lessons = [lesson1, lesson2, lesson3]
-  arr.forEach((e,i) => Object.assign(e, lessons[i]) )
+  let allLessons = {lesson1: {...lesson1}, lesson2: {...lesson2}, lesson3: {...lesson3}}
   return allLessons
 }
+const allLessons = makeAllLessons()
 
 function getTotalStudents(obj) {
   let arrayObjs = Object.values(obj)
@@ -73,3 +71,5 @@ function createReport(obj, name) {
   })
   return {professor: name, aulas: classes, estudantes: students}
 }
+
+console.log(createReport(allLessons, 'Carlos'))

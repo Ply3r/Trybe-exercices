@@ -1,9 +1,9 @@
 function getChange(payable, paid) {
-  const coins = [200, 100, 50, 20, 10, 5, 2 ,1]
-  const result = []
-  let remaining = paid - payable
-  if(remaining === 0) return []
-  if(remaining < 0) throw new Error('paid value is not enough')
+  const coins = [200, 100, 50, 20, 10, 5, 2 ,1];
+  const result = [];
+  let remaining = paid - payable;
+  if(!remaining) return []
+  if(remaining < 0) throw new Error('paid value is not enough');
   let index = 0
   while(remaining !== 0) {
     if(remaining - coins[index] < 0) {

@@ -1,10 +1,8 @@
 const assert = require('assert');
 
 const factorial = num => {
-  for(let c = num - 1; c > 0; c -= 1){
-    num *= c
-  }
-  return num === 0 ? 1 : num
+  for (let c = num - 1; c > 0; c -= 1) { num *= c }
+  return !num ? 1 : num
 }
 
 const in1 = 5;
