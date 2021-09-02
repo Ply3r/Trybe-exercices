@@ -3,14 +3,7 @@ const assert = require("assert");
 const removeVowels = (word) => {
   word = word.split('')
   let cont = 0
-  return word.map(e => {
-    if(e.match(/[aeiou]/gm)){
-      cont += 1
-      return cont
-    }else{
-      return e
-    }
-  }).join('')
+  return word.map(e => e.match(/[aeiou]/gm) ? cont += 1 : e).join('')
 };
 
 
