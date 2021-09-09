@@ -7,10 +7,8 @@ const names = [
 ];
 
 function containsA() {
-  // escreva seu código aqui
-  let cont = 0
-  names.forEach(e => cont += e.match(/[aA]/gm).length)
-  return cont
+  const numbers = names.map((e) => e.match(/[aA]/gm).length)
+  return numbers.reduce((a, b) => a + b);
 }
 
 assert.deepStrictEqual(containsA(), 20);

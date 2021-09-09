@@ -5,12 +5,14 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
   // escreva seu código aqui
-  let obj = []
-  grades.forEach((e, i) => {
-    let media = e.reduce((a, b) => a + b) / e.length
-    obj.push({name: students[i], average: media})
+  const res = students.map((e, i) => {
+    const media = grades[i].reduce((a, b) => a + b) / grades[i].length;
+    const obj = {};
+    obj.name = e;
+    obj.average = media;
+    return obj;
   })
-  return obj
+  return res
 }
 
 const expected = [
