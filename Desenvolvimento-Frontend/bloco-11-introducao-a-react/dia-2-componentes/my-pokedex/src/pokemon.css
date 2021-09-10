@@ -1,0 +1,41 @@
+.poke-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border: 2px solid red;
+  border-radius: 30px;
+  margin: 10px
+}
+
+.Electric {
+  color: #F7BD20;
+}
+
+.Fire {
+  color: #FB9442;
+}
+
+.Bug {
+  color: #31AD42;
+}
+
+.Poison {
+  color: #883473;
+}
+
+.Psychic {
+  color: #FDB5D6;
+}
+
+.Normal {
+  color: #aaaa;
+}
+
+.Dragon {
+  color: #394FE2;
+}
+
+.poke-container > div:nth-child(2) img {
+  height: 150px;
+} 
