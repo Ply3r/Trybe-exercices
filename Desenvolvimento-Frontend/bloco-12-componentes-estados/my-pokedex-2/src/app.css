@@ -7,11 +7,13 @@
 }
 
 .pokecontainer button {
+  color: red;
   font-size: 4rem;
   border: none;
   background: none;
   cursor: pointer;
 }
+
 
 .pokecontainer button:active {
   font-size: 3.8rem;

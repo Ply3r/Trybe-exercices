@@ -33,25 +33,23 @@ class App extends Component {
     }
   }
 
-  choseType() {
+  choseType(event) {
     const container = document.querySelector('.typeContainer');
-    container.addEventListener('click', (e) => {
-      if (e.target !== container) {
-        if (e.target.innerText === 'All') {
-          this.setState((after, _props) => ({
-            pokeIndex: 0,
-            limit: data.length - 1,
-            type: 'All'
-          }))
-        } else {
-          this.setState((after, _props) => ({
-            pokeIndex: 0,
-            limit: data.filter((pokemon) => pokemon.type === e.target.innerText).length - 1,
-            type: after.type = e.target.innerText
-          }))
-        }
+    if (event.target !== container) {
+      if (event.target.innerText === 'All') {
+        this.setState((after, _props) => ({
+          pokeIndex: 0,
+          limit: data.length - 1,
+          type: 'All'
+        }))
+      } else {
+        this.setState((after, _props) => ({
+          pokeIndex: 0,
+          limit: data.filter((pokemon) => pokemon.type === event.target.innerText).length - 1,
+          type: after.type = event.target.innerText
+        }))
       }
-    })
+    } 
   }
 
   makePokemons() {
@@ -86,10 +84,10 @@ class App extends Component {
       <React.Fragment>
         <div className="pokecontainer">
           <button onClick={this.prev}>ᐸ</button>
-          <div>{this.makePokemons()}</div>
+          <div className="box">{this.makePokemons()}</div>
           <button onClick={this.next}>ᐳ</button>
         </div>
-        <div className='typeContainer' onMouseEnter={this.choseType}>
+        <div className='typeContainer' onClick={this.choseType}>
           <button className="normal">All</button>
           <button className="fire">Fire</button>
           <button className="psychic">Psychic</button>
