@@ -1,0 +1,77 @@
+.pokecontainer {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokecontainer button {
+  font-size: 4rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.pokecontainer button:active {
+  font-size: 3.8rem;
+}
+
+.typeContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.typeContainer button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.typeContainer button:active {
+  font-size: 1.2rem;
+}
+
+.electric {
+  background-color: #F7BD20;
+  color: white;
+  border: none;
+}
+
+.fire {
+  background-color: #FB9442;
+  color: white;
+  border: none;
+}
+
+.bug {
+  background-color: #31AD42;
+  color: white;
+  border: none;
+}
+
+.poison {
+  background-color: #883473;
+  color: white;
+  border: none;
+}
+
+.psychic {
+  background-color: #FDB5D6;
+  color: white;
+  border: none;
+}
+
+.normal {
+  background-color: #aaaa;
+  color: white;
+  border: none;
+}
+
+.dragon {
+  background-color: #394FE2;
+  color: white;
+  border: none;
+}
