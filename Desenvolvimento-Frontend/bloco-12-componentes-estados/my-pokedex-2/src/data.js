@@ -7,7 +7,7 @@ const pokemons = [
           value: 6.0,
           measurementUnit: "kg"
       },
-      image: "https:\/\/cdn2.bulbagarden.net/upload/b/b2/Spr_5b_025_m.png",
+      image: "https://media4.giphy.com/media/7T8BMZR3qdCUig46Z6/200.gif",
       moreInfo: "https:\/\/bulbapedia.bulbagarden.net/wiki/Pikachu_(Pok%C3%A9mon)"
   },
   {

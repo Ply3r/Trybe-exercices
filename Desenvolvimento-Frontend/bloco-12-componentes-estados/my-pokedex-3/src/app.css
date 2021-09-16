@@ -1,0 +1,42 @@
+.pokecontainer {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokecontainer button {
+  color: red;
+  font-size: 4rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+.pokecontainer button:active {
+  font-size: 3.8rem;
+}
+
+
+.busca {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.busca button {
+  cursor: pointer;
+  height: 34px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: red;
+  border: none;
+}
+
+.busca button:active {
+  font-size: 0.8rem;
+}

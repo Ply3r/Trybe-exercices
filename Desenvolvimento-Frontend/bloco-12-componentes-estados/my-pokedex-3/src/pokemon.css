@@ -1,0 +1,129 @@
+.poke-container {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border: 2px solid red;
+  border-radius: 30px;
+  margin: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+span {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.electric {
+  background-color: #F8CE2B;
+  color: white;
+  margin: 5px;
+}
+
+.fire {
+  background-color: #F17F2D;
+  color: white;
+  margin: 5px;
+}
+
+.bug {
+  background-color: #A8B820;
+  color: white;
+  margin: 5px;
+}
+
+.grass {
+  background-color: #78C850;
+  color: white;
+  margin: 5px;
+}
+
+.poison {
+  background-color: #A03FA1;
+  color: white;
+  margin: 5px;
+}
+
+.psychic {
+  background-color: #F95788;
+  color: white;
+  margin: 5px;
+}
+
+.normal {
+  background-color: #A9A878;
+  color: white;
+  margin: 5px;
+}
+
+.dragon {
+  background-color: #6F37F9;
+  color: white;
+  margin: 5px;
+}
+
+.fighting {
+  background-color: #C02F26;
+  color: white;
+  margin: 5px;
+}
+
+.ghost {
+  background-color: #715799;
+  color: white;
+  margin: 5px;
+}
+
+.dark {
+  background-color: #190F11;
+  color: white;
+  margin: 5px;
+}
+
+.fairy {
+  background-color: #d54a73;
+  color: white;
+  margin: 5px;
+}
+
+.ground {
+  background-color: #E2C168;
+  color: white;
+  margin: 5px;
+}
+
+.water {
+  background-color: #6890F0;
+  color: white;
+  margin: 5px;
+}
+
+.ice {
+  background-color: #98D9D9;
+  color: white;
+  margin: 5px;
+}
+
+.steel {
+  background-color: #B8B8D0;
+  color: white;
+  margin: 5px;
+}
+
+.rock {
+  background-color: #524a4a;
+  color: white;
+  margin: 5px;
+}
+
+.flying {
+  background-color: #A990F1;
+  color: white;
+  margin: 5px;
+}
+
+.poke-container > div:nth-child(2) img {
+  height: 150px;
+} 

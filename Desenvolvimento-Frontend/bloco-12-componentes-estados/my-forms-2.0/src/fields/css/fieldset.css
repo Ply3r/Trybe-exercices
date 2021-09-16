@@ -1,0 +1,46 @@
+.fieldSet {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 3vh;
+  border-radius: 30px;
+}
+
+input {
+  height: 5vh;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+textarea {
+  resize: unset;
+  height: 10vh;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+select {
+  font-size: 1.2rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 3vh;
+}
+
+.grid {
+  width: 90%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3vh;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}

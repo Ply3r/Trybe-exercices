@@ -4,8 +4,8 @@ import Pokemon from './pokemon';
 import './app.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.prev = this.prev.bind(this)
     this.next = this.next.bind(this)
     this.choseType = this.choseType.bind(this)
@@ -19,7 +19,7 @@ class App extends Component {
 
   prev() {
     if ( this.state.pokeIndex <= 0 ) {
-      this.setState((after, props) => ({pokeIndex: after.pokeIndex = this.state.limit}))
+      this.setState({ pokeIndex: this.state.limit });
     } else {
       this.setState((after, _props) => ({ pokeIndex: after.pokeIndex - 1 }));
     }
@@ -27,7 +27,7 @@ class App extends Component {
 
   next() {
     if ( this.state.pokeIndex >= this.state.limit ) {
-      this.setState((after, _props) => ({ pokeIndex: after.pokeIndex =  0 }))
+      this.setState({ pokeIndex: 0 });
     } else {
       this.setState((after, _props) => ({ pokeIndex: after.pokeIndex + 1 }))
     }
@@ -37,17 +37,18 @@ class App extends Component {
     const container = document.querySelector('.typeContainer');
     if (event.target !== container) {
       if (event.target.innerText === 'All') {
-        this.setState((after, _props) => ({
+        this.setState({
           pokeIndex: 0,
           limit: data.length - 1,
           type: 'All'
-        }))
+        })
       } else {
-        this.setState((after, _props) => ({
+        const { length } = data.filter((pokemon) => pokemon.type === event.target.innerText);
+        this.setState({
           pokeIndex: 0,
-          limit: data.filter((pokemon) => pokemon.type === event.target.innerText).length - 1,
-          type: after.type = event.target.innerText
-        }))
+          limit: length - 1,
+          type: event.target.innerText
+        })
       }
     } 
   }
