@@ -27,7 +27,8 @@ class App extends Component {
 
   prev() {
     if ( this.state.pokeIndex - 1 > 0 ) {
-      this.setState(after => { after.pokeIndex -= 1 })
+      const { pokeIndex } = this.state
+      this.setState({ pokeIndex: pokeIndex - 1 })
     } else {
       this.setState({ pokeIndex: 898 })
     }
@@ -38,7 +39,8 @@ class App extends Component {
     if (this.state.pokeIndex >= 898) {
       this.setState({ pokeIndex: 1 })
     } else {
-      this.setState(after => { after.pokeIndex += 1 })
+      const { pokeIndex } = this.state
+      this.setState({ pokeIndex: pokeIndex + 1 })
     }
     this.makePokemon(this.state.pokeIndex);
   }
