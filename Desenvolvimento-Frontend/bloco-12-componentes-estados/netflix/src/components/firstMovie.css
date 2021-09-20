@@ -1,0 +1,39 @@
+.firstMovie-section {
+  width: 100vw;
+  height: 70vh;
+  background-size: cover;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.information-FirstMovie {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+}
+
+.information-FirstMovie h1 {
+  align-self: center;
+  font-size: 2.5em;
+  margin-bottom: 3vh;
+}
+
+.overview {
+  text-align: justify;
+  margin-bottom: 5vh;
+}
+
+.information-FirstMovie h2 {
+  margin-bottom: 5vh;
+}
+
+.rating {
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+}
+
