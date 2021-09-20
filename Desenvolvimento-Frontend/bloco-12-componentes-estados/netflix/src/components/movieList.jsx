@@ -9,10 +9,10 @@ class MovieList extends Component {
     const { types, search } = this.props;
     return (
       <section>
-        <MovieSection types={types} search={search} title="Top rated:" page={Math.floor(Math.random() * 10)} />
-        <MovieSection types={types} search={search} title="You might like:" page={Math.floor(Math.random() * 10)} />
-        <MovieSection types={types} search={search} title="Others like'd:" page={Math.floor(Math.random() * 10)} />
-        <MovieSection types={types} search={search} title="More films:" page={Math.floor(Math.random() * 10)} />
+        <MovieSection types={types} search={search} title="Top rated:" page={Math.ceil(Math.random() * 20)} />
+        <MovieSection types={types} search={search} title="You might like:" page={Math.ceil(Math.random() * 20)} />
+        <MovieSection types={types} search={search} title="Others like'd:" page={Math.ceil(Math.random() * 20)} />
+        <MovieSection types={types} search={search} title="More films:" page={Math.ceil(Math.random() * 20)} />
       </section>
     );
   }
