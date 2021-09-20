@@ -1,6 +1,5 @@
 header {
   position: fixed;
-  margin-bottom: 8vh;
   width: 100vw;
   padding: 0 80px;
   height: 8vh;
@@ -8,6 +7,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 8vh;
 }
 
 header h1 {

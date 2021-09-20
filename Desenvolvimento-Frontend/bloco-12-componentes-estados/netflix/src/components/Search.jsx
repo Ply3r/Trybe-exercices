@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types'
-import getGenres from './getGenrers'
+import getGenres from './../getGenrers'
 import './search.css'
 
 class Search extends Component {
@@ -8,15 +8,15 @@ class Search extends Component {
     const genres = getGenres.map((names) => (
       <option value={names[0]}>{names[1]}</option>
     ))
-    const { search, type, formChange } = this.props;
+    const { search, types, formChange } = this.props;
     
       
     return (
       <div className="search-container">
         <select
-          name="type"
+          name="types"
           id="search"
-          value={type}
+          value={types}
           onChange={formChange}
         >
           <option value="All">Todos</option>
@@ -36,7 +36,7 @@ class Search extends Component {
 
 Search.propTypes = {
   search: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  types: PropTypes.string.isRequired,
   formChange: PropTypes.func.isRequired,
 }
 

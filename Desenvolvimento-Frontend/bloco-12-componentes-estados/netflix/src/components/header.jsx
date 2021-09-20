@@ -9,7 +9,7 @@ class Header extends Component {
     this.formChange = this.formChange.bind(this);
     this.state = {
       search: '',
-      type: 'All',
+      types: 'All',
     }
   }
 
@@ -18,7 +18,6 @@ class Header extends Component {
     onClick(this.state)
     this.setState({
       search: '',
-      type: 'All',
     });
   }
 
@@ -28,14 +27,14 @@ class Header extends Component {
   }
 
   render() {
-    const { search, type } = this.state;
+    const { search, types } = this.state;
     return (
       <header>
         <h1>NETFLIX</h1>
         <div className="search-header">
           <Search
             search={search}
-            type={type}
+            types={types}
             formChange={this.formChange}
           />
           <button onClick={this.exportSearch}>Buscar</button>
