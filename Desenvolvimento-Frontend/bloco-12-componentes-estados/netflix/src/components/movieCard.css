@@ -46,6 +46,23 @@
   padding: 10px;
 }
 
+.paragrafo::-webkit-scrollbar {
+  width: 3px;
+}
+
+.paragrafo::-webkit-scrollbar-track {
+  background-color: #141414;
+}
+
+.paragrafo::-webkit-scrollbar-thumb {
+  background-color: #aaaa;
+  border-radius: 10px;
+}
+
+.paragrafo::-webkit-scrollbar-thumb:hover {
+  background-color: #cacacaaa;
+}
+
 .close {
   align-items: flex-end;
   cursor: pointer;
