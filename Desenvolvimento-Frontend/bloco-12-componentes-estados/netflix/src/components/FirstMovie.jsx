@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import getApi from '../getFirstMovie';
+import getFirstMovie from '../getFirstMovie';
 import './firstMovie.css'
 
 class FirstMovie extends Component {
@@ -17,7 +17,8 @@ class FirstMovie extends Component {
   }
 
   componentDidMount() {
-    getApi().then(({ id, original_language, vote_average, title, genre_ids, overview, img }) => {
+    const random = Math.floor(Math.random() * 20)
+    getFirstMovie(random).then(({ id, original_language, vote_average, title, genre_ids, overview, img }) => {
       this.setState({ title, id, original_language, vote_average, genre_ids, overview, img })
     })
   }
@@ -31,6 +32,9 @@ class FirstMovie extends Component {
           <p className="overview">{overview}</p>
           <h2>Rating: <span className="rating">{vote_average}</span></h2>
           <p className="languages">Languages: {original_language}</p>
+        </div>
+        <div className="play-div">
+          <button className="play-button">▶</button>
         </div>
       </section>
     );
