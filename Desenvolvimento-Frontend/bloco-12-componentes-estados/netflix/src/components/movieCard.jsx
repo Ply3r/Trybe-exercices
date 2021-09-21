@@ -20,10 +20,12 @@ class MovieCard extends Component {
   }
 
   render() {
-    const { vote_average, title, overview, img } = this.props;
+    const { vote_average, title, overview, img, id } = this.props;
     return (
       <>
-      <div className="imagem-defalt" style={{backgroundImage: `url(${img})`}} onClick={this.showImagem} ></div>
+      <div id={id}>
+        <div className="imagem-defalt" style={{backgroundImage: `url(${img})`}} onClick={this.showImagem} ></div>
+      </div>
       <div className="imagem-hiden" style={{display: this.state.showCard}}>
         <div className="imagem-dentro-do-bgl" style={{backgroundImage: `url(${img})`}}>
           <p onClick={this.closeImagem} className="close">X</p>
