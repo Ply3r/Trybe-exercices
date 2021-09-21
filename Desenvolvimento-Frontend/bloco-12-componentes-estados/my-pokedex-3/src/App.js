@@ -12,9 +12,7 @@ class App extends Component {
     this.next = this.next.bind(this)
     this.searchChange = this.searchChange.bind(this);
     this.buscar = this.buscar.bind(this)
-    this.load = this.load.bind(this)
     this.state = {
-      render: 0,
       pokeIndex: 1,
       name: '',
       id: '',
@@ -68,11 +66,8 @@ class App extends Component {
     this.makePokemon(busca)
   }
 
-  load() {
-    this.setState(after => after.render += 1)
-    if (this.state.render < 1) {
-      this.makePokemon(1)
-    }
+  componentDidMount() {
+    this.makePokemon(1)
   }
 
   render() {
@@ -80,7 +75,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
-      <div className="pokecontainer" onMouseEnter={this.load}>
+      <div className="pokecontainer">
         <button onClick={this.prev}>ᐸ</button>
         <Pokemon
           name={name}
