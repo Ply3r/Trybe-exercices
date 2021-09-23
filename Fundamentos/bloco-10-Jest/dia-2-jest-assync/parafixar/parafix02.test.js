@@ -9,7 +9,7 @@ const findAnimalsByType = (type) => (
     setTimeout(() => {
       const arrayAnimals = Animals.filter((animal) => animal.type === type);
 
-      if (arrayAnimals.length !== 0) {
+      if (arrayAnimals.length) {
         return resolve(arrayAnimals);
       }
 
@@ -18,23 +18,20 @@ const findAnimalsByType = (type) => (
   })
 );
 
-describe('Quando o tipo do animal existe', () => {
-  test('Retorne a lista de animais', () => (
-    findAnimalsByType('Dog').then((listDogs) => {
-      expect(listDogs[0].name).toEqual('Dorminhoco');
-      expect(listDogs[1].name).toEqual('Soneca');
-    })
-  ));
-});
 
-describe('Testando promise - findAnimalsByType', () => {
-  describe('Quando o tipo do animal existe', () => {
-    test('Retorne a lista de animais', () => {
-      const listDogs = [
-        { name: 'Dorminhoco', age: 1, type: 'Dog' },
-        { name: 'Soneca', age: 2, type: 'Dog' },
-      ];
-      return expect(getListAnimals('Dog')).resolves.toEqual(listDogs);
-    });
-  });
-});
+describe('Testando o comportamento de promisses no jest', () => {
+  it('Testa se o retorndo da função com o tipo Dog é o correto', () => {
+    expect.assertions(1)
+    return findAnimalsByType('Dog')
+      .then((res) => (
+        expect(res).toStrictEqual([{ name: 'Dorminhoco', age: 1, type: 'Dog' }, { name: 'Soneca', age: 2, type: 'Dog' }])
+      ))
+  })
+  it('testa se não existe o tipo girafa no objeto animal', () => {
+    expect.assertions(1)
+    return findAnimalsByType('girafa')
+      .catch((error) => (
+        expect(error.message).toMatch('Não possui esse tipo de animal.')
+      ))
+  })
+})
