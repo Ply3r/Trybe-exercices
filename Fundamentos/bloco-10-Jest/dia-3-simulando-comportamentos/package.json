@@ -1,0 +1,17 @@
+{
+  "name": "dia-3-simulando-comportamentos",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.2.1",
+    "node-fetch": "^3.0.0"
+  }
+}
