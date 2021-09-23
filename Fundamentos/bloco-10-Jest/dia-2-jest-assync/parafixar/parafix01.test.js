@@ -1,29 +1,23 @@
-test('Testa funções assync no Jest', (done) => {
-  setTimeout(() => {
+const asyncSum = (a, b, cb) => cb(a, b);
+
+describe('Teste de funções assincronas e callbacks no jest', () => {
+  it('testa o comportamendo de uma simulação de função async', (done) => {
+    setTimeout(() => {
+      try {
+        expect(5).toBe(5)
+        console.log('deveria passar')
+        done();
+      } catch(error) {
+        done(error)
+      }
+    }, 500)
+  })
+  it('testa se com uma callback funciona como esperado', (done) => {
     try {
-      expect(5).toBe(5);
-      console.log('Deveria falhar!');
-      done();
-    } catch (error) {
-      done(error);
+      expect(asyncSum(2, 2, (a, b) => a + b)).toBe(4)
+      done()
+    } catch(error) {
+      done(error)
     }
-  }, 500);
+  })
 })
-
-const asyncSum = (a, b, callback) => {
-  setTimeout(() => {
-    const result = a + b;
-    callback(result);
-  }, 500);
-};
-
-test('Testando asyncSum, soma 5 mais 10', (done) => {
-  asyncSum(5, 10, (result) => {
-    try {
-      expect(result).toBe(15);
-      done();
-    } catch (error) {
-      done(error);
-    }
-  });
-});
