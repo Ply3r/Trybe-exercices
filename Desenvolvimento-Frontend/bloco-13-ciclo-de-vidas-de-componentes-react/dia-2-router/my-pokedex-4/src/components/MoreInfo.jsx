@@ -32,15 +32,15 @@ class MoreInfo extends Component {
     return (
       <>
       <Pokemon obj={obj} moreInfo={true}/>
-      <h1>Sumary</h1>
-      <p>{ obj.summary }</p>
-      <h1>Location</h1>
-      <div>
-        {locations}
-      </div>
-      <div>
+      <div className="container favoritar">
         <input type="checkbox" onChange={this.favoritar} checked={ favoritos ? favoritos[name] : ''} />
         <p>Favoritar Pokemon</p>
+      </div>
+      <h1>Sumary</h1>
+      <p className="sumary">{ obj.summary }</p>
+      <h1>Location</h1>
+      <div className="grid-locations">
+        {locations}
       </div>
       </>
     );

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import MoreInfo from './components/MoreInfo'
+import './css/index.css';
 import App from './components/App';
 
 

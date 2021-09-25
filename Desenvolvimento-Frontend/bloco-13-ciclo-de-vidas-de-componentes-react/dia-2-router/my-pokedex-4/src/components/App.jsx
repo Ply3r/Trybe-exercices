@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PokeContainer from "./pokeContainer";
+import '../css/app.css';
 import MoreInfo from "./MoreInfo";
 import Favoritos from "./Favoritos";
 
