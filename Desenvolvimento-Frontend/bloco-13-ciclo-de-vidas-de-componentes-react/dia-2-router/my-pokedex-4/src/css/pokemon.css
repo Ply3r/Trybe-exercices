@@ -1,0 +1,36 @@
+.poke-container {
+  display: grid;
+  width: 500px;
+  height: 250px;
+  place-items: center;
+  border: 5px solid red;
+  border-radius: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.poke-container div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-container .imagem-container img {
+  width: 200px;
+}
+
+button.link {
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgb(103, 103, 224);
+}
+
+button.link:active {
+  box-shadow: none;
+}
