@@ -1,0 +1,93 @@
+h1 {
+  font-size: 4rem;
+  color: red;
+  text-align: center;
+  margin: 25px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.prevNext {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: red;
+  font-size: 4rem;
+}
+
+.prevNext:active {
+  font-size: 3.7rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.grid-locations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 15px;
+  margin-bottom: 5vh;
+}
+
+.grid-locations div {
+  display: grid;
+  place-items: center;
+}
+
+.favorito {
+  justify-content: center;
+  margin: 3vh 0;
+}
+
+.favoritar {
+  margin: 25px;
+  justify-content: center;
+}
+
+.favoritar input {
+  margin-right: 5px;
+}
+
+.sumary {
+  text-align: center;
+}
+
+.flex-container {
+  right: -22%;
+  position: relative;
+  display: flex;
+  transition: 1s ease;
+}
+
+.absolute {
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  background-color: white;
+  border-radius: 50%;
+  place-items: center;
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.absolute:active {
+  width: 60px;
+  height: 60px;
+}
+
+.left {
+  top: 28%;
+  left: 3%;
+}
+
+.right {
+  top: 28%;
+  right: 3%;
+}
