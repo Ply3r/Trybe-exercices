@@ -1,23 +1,14 @@
 .poke-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-width: 500px;
   height: 300px;
-  place-items: center;
   border: 5px solid red;
   border-radius: 30px;
   margin: 0 20px;
   grid-template-columns: repeat(2, 1fr);
   box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
   transition: 2s ease;
-}
-
-.poke-container div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .poke-container .imagem-container img {
