@@ -34,7 +34,7 @@ class App extends Component {
       <h1>PokeIndex</h1>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={ PokeContainer } />
+          <Route exact path="/" render={(props) => <PokeContainer favoritos={favoritos} /> } />
           <Route path="/moreInfo/:name" render={(props) => <MoreInfo {...props} importFavorite={this.importFavorite} favoritos={this.state.favoritos}/>} />
           <Route path="/favorite" render={(props) => <Favoritos favoritos={favoritos ? favoritos : ''} />} />
         </Switch>

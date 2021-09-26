@@ -4,6 +4,7 @@ import data from '../data'
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import pokemons from "../data";
 
 class PokeContainer extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class PokeContainer extends Component {
     this.prev = this.prev.bind(this)
     this.state = {
       pokeIndex: 0,
-      favoritos: [],
     }
   }
 
@@ -36,12 +36,22 @@ class PokeContainer extends Component {
 
   render() {
     const { pokeIndex } = this.state;
+    const { favoritos } = this.props;
     const pokemon = data[pokeIndex];
+    const entries = Object.entries(favoritos)
+    const pokemons = entries
+      .filter((poke) => poke[1])
+      .map((poke) => poke[0])
+    let fav = false;
+    if (pokemons.includes(pokemon.name)) {
+      fav = true
+    }
+
     return (
       <>
       <div className="container">
         <button className="prevNext" name="prev" onClick={this.prev}><FontAwesomeIcon icon={faAngleLeft} /></button>
-        <Pokemon obj={pokemon} />
+        <Pokemon obj={pokemon} fav={fav}/>
         <button className="prevNext" name="next" onClick={this.next}><FontAwesomeIcon icon={faAngleRight} /></button>
       </div>
       <div className="container favorito">

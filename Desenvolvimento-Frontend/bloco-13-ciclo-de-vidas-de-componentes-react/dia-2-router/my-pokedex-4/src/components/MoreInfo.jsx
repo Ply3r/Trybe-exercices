@@ -29,9 +29,13 @@ class MoreInfo extends Component {
       </div>
     ))
     const { favoritos } = this.props;
+    let fav = false;
+    if (favoritos[name]) {
+      fav = true;
+    }
     return (
       <>
-      <Pokemon obj={obj} moreInfo={true}/>
+      <Pokemon obj={obj} fav={fav} moreInfo={true}/>
       <div className="container favoritar">
         <input type="checkbox" onChange={this.favoritar} checked={ favoritos ? favoritos[name] : ''} />
         <p>Favoritar Pokemon</p>
