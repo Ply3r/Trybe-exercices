@@ -9,11 +9,23 @@ import oImage from './o.svg';
 // Use-o para selecionar uma casa especifica nas horas dos testes.
 
 class GameCell extends React.Component {
+  constructor(props) {
+    super(props);
+    this.exportId = this.exportId.bind(this);
+  }
+
+  exportId({target: {id}}) {
+    const { importId } = this.props;
+    importId(id)
+  }
+
   render() {
-    const { id } = this.props;
+    const { id, playerId } = this.props;
 
     return (
-      <div data-testid={`cell_${id}`} className="game-cell" />
+      <div onClick={ this.exportId } data-testid={`cell_${id}`} id={id} className="game-cell">
+        { playerId === 1 ? <img src={xImage} data-testid={`X_${id}`} alt="aaa" /> : playerId === 2 ? <img data-testid={`O_${id}`} src={oImage} alt="aaa"/> : '' }
+      </div>
     );
   }
 }
