@@ -28,15 +28,23 @@ class TicTacToe extends React.Component {
   checkWinner() {
     const magicSquare = [8, 1, 6, 3, 5, 7, 4, 9, 2]
     const { gameBoard, jogadas, activePlayer } = this.state;
-    console.log(gameBoard)
     const sumMagic = gameBoard.reduce((acc, curr, index) => {
       if (curr === activePlayer) {
         acc.push(magicSquare[index])
       }
       return acc;
     }, [])
-      .reduce((a, b) => a + b)
-    if (sumMagic === 15) {
+    let isWinner = false;
+    if (sumMagic.length < 3) return;
+    sumMagic.forEach((value, index) => {
+      for (let c = index + 1; c < sumMagic.length; c += 1) {
+        if (!sumMagic[c + 1]) break;
+        const sum = value + sumMagic[c] + sumMagic[c + 1];
+        console.log(value, sumMagic[c], sumMagic[c + 1])
+        if (sum === 15) isWinner = true;
+      }
+    })
+    if (isWinner) {
       activePlayer === 1 ? this.setState({ winner: 'X' }) : this.setState({ winner: 'O' })
     } else if(jogadas === 9) {
       this.setState({ winner: 'draw' })
