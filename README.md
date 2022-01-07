@@ -41,10 +41,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-6: _[Projeto - Arte com Pixels](https://ply3r.github.io/projetos/pixelArt/index.html)_
-- [X] 5-7: _[Projeto - Lista de tarefas](https://ply3r.github.io/projetos/toDoList/html/index.html)_
-- [X] 5-7: _[Projeto - Adivinhe a Cor](https://ply3r.github.io/projetos/adivinhe-a-cor/index.html)_
-- [X] 5-7: _[Projeto - Carta Misteriosa](https://ply3r.github.io/projetos/carta-misteriosa/index.html)_
+- [X] 5-6: Projeto - Arte com Pixels
+- [X] 5-7: Projeto - Lista de tarefas
+- [X] 5-7: Projeto - Adivinhe a Cor
+- [X] 5-7: Projeto - Carta Misteriosa
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -53,14 +53,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 6-3: _CSS Flexbox - Part 1_
 - [X] 6-4: _CSS Flexbox - Part 2_
 - [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - TrybeWarts](https://ply3r.github.io/projetos/trybe-warts/index.html)_
+- [X] 6-6: Projeto - TrybeWarts
 
 ##### Bloco 7: JavaScript ES6 & Testes Unitários
 
 - [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [X] 7-2: _JavaScript ES6 - Objects_
 - [X] 7-3: _Testes unitÃ¡rios em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [X] 7-4: Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: JavaScript ES6
 
@@ -68,20 +68,20 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
 - [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [X] 8-5: _[Projeto - Zoo functions]()_
+- [X] 8-5: Projeto - Zoo functions
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [X] 9-2: _JavaScript Promises_
-- [X] 9-3: _[Projeto - Carrinho de Compras](https://ply3r.github.io/projetos/loja_de_roupa/index.html)_
+- [X] 9-3: Projeto - Carrinho de Compras
 
 ##### Bloco 10: Jest
 
 - [X] 10-1: _Primeiros passos no Jest_
 - [X] 10-2: _Jest - Testes Assíncronos_
 - [X] 10-3: _Jest - Simulando comportamentos_
-- [X] 10-4: _[Projeto - Jest Assíncrono e Mocking]()_
+- [X] 10-4: Projeto - Jest Assíncrono e Mocking
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
@@ -89,7 +89,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] 11-1: _'Hello, world!' no React!_
 - [X] 11-2: _Componentes React_
-- [X] 11-3: _[Projeto - Movie Cards Library]()_
+- [X] 11-3: Projeto - Movie Cards Library
 
 ##### Bloco 12: React
 
@@ -107,7 +107,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 14: Metodologias Ágeis
 
 - [X] 14-1: _Metodologias Ágeis_
-- [X] 14-2: _[Projeto - Frontend Online Store]()_
+- [X] 14-2: _[Projeto - Frontend Online Store](https://ply3r.github.io/mood-store2.0/)_
 
 ##### Bloco 15: Testes em React
 
@@ -122,7 +122,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 16-3: _React com Redux - Prática_
 - [X] 16-4: _React com Redux - Parte 2_
 - [X] 16-5: _Testes síncronos com React-Redux_
-- [X] 16-6: _[Projeto - Tabela com filtros de dados]()_
+- [X] 16-6: _[Projeto - Tabela com filtros de dados](https://ply3r.github.io/trybe-wallet/)_
 
 ##### Bloco 17: Projeto React
 
@@ -133,11 +133,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] 18-1: _Context API do React_
 - [X] 18-2: _React Hooks - useState e useContext_
 - [X] 18-3: _React Hooks - useEffect e Hooks customizados_
-- [X] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [X] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks](https://ply3r.github.io/star-wars-3d/)_
 
 ##### Bloco 19: Projeto Final de Front-end
 
-- [X] 19-1: _[Projeto - App de Receitas]()_
+- [X] 19-1: _[Projeto - App de Receitas](https://ply3r.github.io/recipes-app/)_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
