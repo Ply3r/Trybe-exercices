@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node exercises",
     "imc": "node exercises/imc.js",
     "velocidade": "node exercises/velocidade.js",
+    "sorteio": "node exercises/sorteio.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
