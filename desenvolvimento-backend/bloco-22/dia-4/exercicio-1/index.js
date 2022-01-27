@@ -63,6 +63,29 @@ app
         .json({ message: 'Error! not found' })
     }
   })
+  .delete((req, res) => {
+    const { id } = req.params;
+    const drinkId = drinks.findIndex((drink) => +drink.id === +id);
+
+    if (drinkId === -1) return res.status(404).json({ message: 'Not Found' });
+   
+    drinks.splice(drinkId, 1);
+    res
+      .status(204)
+      .json({ message: 'OK' });
+  })
+  .put((req, res) => {
+    const { id } = req.params;
+    const { name, price } = req.body;
+    const drinkId = drinks.findIndex((drink) => +drink.id === +id);
+
+    if (drinkId === -1) return res.status(404).json({ message: 'Not Found' });
+   
+    drinks[drinkId] = { ...drinks[drinkId], name, price };
+    res
+      .status(204)
+      .json({ message: 'OK' });
+  })
 
 app
   .route('/drinks')
@@ -71,9 +94,7 @@ app
       .status(200)
       .json(drinks)
   })
-  .post((req, res) => {
-    const body = req.body;
-
+  .post(({ body }, res) => {
     if (body) {
       drinks.push(body);
       res
