@@ -1,3 +1,4 @@
+const axios = require('axios');
 const { readFileSync } = require('fs');
 
 const getDbData = () => {
@@ -13,9 +14,15 @@ const verifyIfExists = (cepParam) => {
   return CEP;
 }
 
-const verifyCEP = (cep) => {
+const verifyCEP = async (cep) => {
   const regexCep = /\d{5}-?\d{3}/gm
-  return regexCep.test(cep);
+  if (!regexCep.test(cep)) return false;
+
+  const isReal = await axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+    .then((res) => res.data)
+    .then(({ erro }) => erro ? false : true);
+
+  return isReal;
 }
 
 module.exports = { getDbData, verifyIfExists, verifyCEP }
