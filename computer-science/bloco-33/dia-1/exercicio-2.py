@@ -50,4 +50,13 @@ def checkTriangle(a, b, c):
   else: return "Triângulo Escaleno: três lados diferentes."
   
   
-print(checkTriangle(5, 4, 3))  
+def makePiramide(n):
+  result = ''
+  
+  for x in range(1, n + 1):
+    result += ('*' * (n - (n - x))) + '\n'
+    
+  return result
+
+
+print(makePiramide(5))
